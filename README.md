@@ -8,3 +8,5 @@ HTML5 allows us to insert PHP tags inside a web page's body. These tags contain 
 
 ## Example 2: Variables
 In PHP, like many other languages such as JavaScript, it is not necessary to specify the data type when allocating a variable. A remarkable difference is that every variable is prefixed with the symbol `$`. To define and initialize a constant, we use the function `define("MY_CONSTANT", value)`. This allows us to create a constant with a fixed value that cannot be changed throughout the script's execution.
+
+## Example 3: Insert PHP code in a HTML block
