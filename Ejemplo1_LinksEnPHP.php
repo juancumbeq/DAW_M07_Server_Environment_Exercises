@@ -16,12 +16,13 @@
     <!--COMENTARIO EN HTML-->
     <li>
       <!--ESTA LÍNEA MUESTRA "LO PRIMERO" COMO UN ELEMENTO DE UNA LISTA. LA PALABRA "PRIMERO" ES UN LINK QUE AL CLICAR NOS LLEVA AL DOCUMENTO "HOLA MUNDO.PHP"-->
-      <?php echo "Lo <a href='Hola_Mundo.php'> primero </a>"?>
+      <?php echo "Lo <a href='Hola_Mundo.php'> primero </a>" ?>
     </li>
     <li>
-      <?php echo "Lo segundo"?>
+      <?php echo "Lo segundo" ?>
     </li>
   </ul>
 </body>
 <!-- ES NECESARIO USAR LA EXTENSIÓN.PHP EN EL ARCHIVO PARA QUE EL SERVIDOR SEA CAPAZ DE DETECTAR EL CÓDIGO PHP. DICHO DE OTRA MANERA EL SERVIDOR PUEDE INTERPRETAR CÓDIGO HTML DENTRO DE UN ARCHIVO PHP. -->
+
 </html>
