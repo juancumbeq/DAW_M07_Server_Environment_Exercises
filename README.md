@@ -12,6 +12,7 @@ HTML5 allows us to insert PHP tags inside a web page's body. These tags contain 
 - `echo()`
 <br><br>
 
+
 ## Example 2: Variables
 In PHP, like many other languages such as JavaScript, it is not necessary to specify the data type when allocating a variable. A remarkable difference is that every variable is prefixed with the symbol `$`. To define and initialize a constant, we use the function `define("MY_CONSTANT", value)`. This allows us to create a constant with a fixed value that cannot be changed throughout the script's execution.
 
@@ -20,6 +21,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `(int)($variable)`
 - `round()`
 <br><br>
+
 
 ## Example 3: Insert PHP code in a HTML block
 
@@ -32,7 +34,183 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 ## Example 4: Insert Date
 
 
-#### *Seen methosds*
+#### *Seen methods*
+- `time()`
+- `date()`
+- `getdate()`
+- `echo()`
+<br><br>
+
+
+## Example 5: Login Form
+
+
+#### *Seen methods*
+- `<form action="file.php">`
+- `<input type="submit">`
+<br><br>
+
+
+## Example 6: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+## Example 7: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+## Example 8: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+## Example 9: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+## Example 10: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+## Example 11: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+## Example 12: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 13: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 14: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 15: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 16: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 17: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+<!-- ## Example 18: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 19: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br>
+
+
+
+## Example 20: 
+
+
+#### *Seen methods*
+- `time()`
+- `
+<br><br> -->
+
+
+
+## Extra 1 - 1.2: Spanish Date
+
+
+#### *Seen methods*
+- `time()`
+- `date()`
+- `setlocale()`
+- ~~`strftime()`~~ *- deprecated*
+- `echo()`
+<br><br>
+
+
+## Extra 2: Insert Date
+
+
+#### *Seen methods*
 - `time()`
 - `date()`
 - `getdate()`

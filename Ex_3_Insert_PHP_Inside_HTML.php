@@ -21,9 +21,9 @@
 
   <?php
     # PODEMOS DEFINIR CÓDIGO PHP EN CUALQUIER PUNTO DEL FICHERO
-    $direccion = "Ejemplo2_Variable";
+    $direccion = "Ex_2_Variables";
     $extension = ".php";
-    $imagen = "photo.jpg";
+    $imagen = "Ex_3.2_photo.jpg";
   ?>
   <!-- SEGUIMOS PROGRAMANDO EN HTML E INSERTAMOS DENTRO DE ÉL, EL FRAGMENTO DE PHP PARA COMPLETAR ALGÚN VALOR -->
   <a href="<?php echo $direccion.$extension?>">

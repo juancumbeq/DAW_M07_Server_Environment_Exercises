@@ -16,7 +16,7 @@
     <!--COMENTARIO EN HTML-->
     <li>
       <!--ESTA LÍNEA MUESTRA "LO PRIMERO" COMO UN ELEMENTO DE UNA LISTA. LA PALABRA "PRIMERO" ES UN LINK QUE AL CLICAR NOS LLEVA AL DOCUMENTO "HOLA MUNDO.PHP"-->
-      <?php echo "Lo <a href='Hola_Mundo.php'> primero </a>" ?>
+      <?php echo "Lo <a href='Ex_1.2_Hello_World.php'> primero </a>" ?>
     </li>
     <li>
       <?php echo "Lo segundo" ?>
