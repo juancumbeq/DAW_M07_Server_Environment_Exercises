@@ -3,169 +3,151 @@
 Here you can find some exercises I made during my Certificate of Higher Education (HNC). We started from scratch, learning the PHP fundamentals and how to integrate it with other technologies like HTML5 to create forms and SQL to request data from a database.
 <br><br>
 
-
 ## Example 1: Links_Inside_PHP
 
 HTML5 allows us to insert PHP tags inside a web page's body. These tags contain executable PHP code. In this case, we are using the `echo()` function to print a `<a href="#">` tag inside the HTML body, creating a reference to another `.php` file.
 
-#### *Seen methods*
-- `echo()`
-<br><br>
+#### _Seen methods_
 
+- `echo()`
+  <br><br>
 
 ## Example 2: Variables
+
 In PHP, like many other languages such as JavaScript, it is not necessary to specify the data type when allocating a variable. A remarkable difference is that every variable is prefixed with the symbol `$`. To define and initialize a constant, we use the function `define("MY_CONSTANT", value)`. This allows us to create a constant with a fixed value that cannot be changed throughout the script's execution.
 
-#### *Seen methods*
+#### _Seen methods_
+
 - `define()`
 - `(int)($variable)`
 - `round()`
-<br><br>
-
+  <br><br>
 
 ## Example 3: Insert PHP code in a HTML block
 
+#### _Seen methods_
 
-#### *Seen methods*
 - `echo()`
-<br><br>
-
+  <br><br>
 
 ## Example 4: Insert Date
 
+#### _Seen methods_
 
-#### *Seen methods*
 - `time()`
 - `date()`
 - `getdate()`
 - `echo()`
-<br><br>
-
+  <br><br>
 
 ## Example 5: Login Form
 
+#### _Seen methods_
 
-#### *Seen methods*
 - `<form action="file.php">`
 - `<input type="submit">`
-<br><br>
+  <br><br>
 
+## Example 6: Adding & Multiplying
 
-## Example 6: 
+#### _Seen methods_
 
+- `for()`
+  <br><br>
 
-#### *Seen methods*
+## Example 7: Sessions - Hold Information
+
+#### _Seen methods_
+
+- `session_start()`
+- `session_destroy()`
+- `time()`
+- `!isset()`
+- `$_SESSION[]`
+- `var_dump()`
+  <br><br>
+
+## Example 8:
+
+#### _Seen methods_
+
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 9:
 
-## Example 7: 
+#### _Seen methods_
 
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 10:
 
-## Example 8: 
+#### _Seen methods_
 
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 11:
 
-## Example 9: 
+#### _Seen methods_
 
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 12:
 
-## Example 10: 
+#### _Seen methods_
 
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 13:
 
-## Example 11: 
+#### _Seen methods_
 
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 14:
 
-## Example 12: 
+#### _Seen methods_
 
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 15:
 
+#### _Seen methods_
 
-## Example 13: 
-
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 16:
 
+#### _Seen methods_
 
-## Example 14: 
-
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
+## Example 17:
 
+#### _Seen methods_
 
-## Example 15: 
-
-
-#### *Seen methods*
 - `time()`
 - `
-<br><br>
+  <br><br>
 
-
-
-## Example 16: 
-
-
-#### *Seen methods*
-- `time()`
-- `
-<br><br>
-
-
-
-## Example 17: 
-
-
-#### *Seen methods*
-- `time()`
-- `
-<br><br>
-
-
-
-<!-- ## Example 18: 
+<!-- ## Example 18:
 
 
 #### *Seen methods*
@@ -175,7 +157,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 
 
-## Example 19: 
+## Example 19:
 
 
 #### *Seen methods*
@@ -185,7 +167,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 
 
-## Example 20: 
+## Example 20:
 
 
 #### *Seen methods*
@@ -193,26 +175,23 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `
 <br><br> -->
 
-
-
 ## Extra 1 - 1.2: Spanish Date
 
+#### _Seen methods_
 
-#### *Seen methods*
 - `time()`
 - `date()`
 - `setlocale()`
-- ~~`strftime()`~~ *- deprecated*
+- ~~`strftime()`~~ _- deprecated_
 - `echo()`
-<br><br>
-
+  <br><br>
 
 ## Extra 2: Insert Date
 
+#### _Seen methods_
 
-#### *Seen methods*
 - `time()`
 - `date()`
 - `getdate()`
 - `echo()`
-<br><br>
+  <br><br>
