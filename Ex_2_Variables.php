@@ -13,7 +13,7 @@
     $texto = "caracteres"; // EN PHP PODEMOS DEFINIR VARIABLES DE VARIAS MANERAS, NO ES NECESARIO ESPECIFICAR EL TIPO.
     $entero = 2021;
     $decimal = 99.9;
-    define("constante", 100); // MEDIANTE DEFINE DEFINIMOS CONSTANTES, INDICANDO SU NOMBRE Y SU VALOR. ES UN STRING
+    define("constante", 100); // MEDIANTE define() DEFINIMOS CONSTANTES, INDICANDO SU NOMBRE Y SU VALOR. ES UN STRING
 
     // PARA CONCANTENAR CADENAS DE TEXTO EN PHP, SE USA EL "."
     echo "Esto es una cadena de " .$texto. "</br>"; 

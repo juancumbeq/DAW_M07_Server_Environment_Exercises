@@ -1,5 +1,3 @@
-
-
 <?php
   $time =  time();
   echo $time;
@@ -40,3 +38,4 @@
   /* Otra manera de mostrar la fecha, mediante el nombre de los elementos del array accedemos a cada uno de sus valores */
   echo 'Utilizando getdate(date("U")); muestra '.'<b>'."$fecha[weekday], $fecha[month] $fecha[mday], $fecha[year] - $fecha[hours]:$fecha[minutes]:$fecha[seconds]".'</b> <br>';
 ?>
+
