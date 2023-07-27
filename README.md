@@ -57,6 +57,9 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 ## Example 7: Sessions - Hold Information
 
+### Example 7.2: Cookies
+
+
 #### _Seen methods_
 
 - `session_start()`
@@ -65,6 +68,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `!isset()`
 - `$_SESSION[]`
 - `var_dump()`
+- `array()`
   <br><br>
 
 ## Example 8:
