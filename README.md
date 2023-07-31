@@ -52,10 +52,9 @@ A very simple way to handle dates is provided by the `getdate()` method. It retu
 
 
 ## [Example 5: Login Form](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
-
+First contact with form data handling. Every form tag in HTML5 contains `action` and `method` attributes. The first one indicates the PHP file where the data will be sent, in this case: `Ex_2_Variables.php`. The second attribute indicates how the data will be sent. There are two alternatives: `GET` and `POST`. The `GET` method is used when we do not worry about privacy, so the form input data is sent through the URL after the `?` symbol. On the other hand, the `POST` method encrypts the data in the URL, so no one can read it.
 
 #### _Seen methods:_
-
 - `<form action="file.php">`
 - `<input type="submit">`
   <br><br>
@@ -66,7 +65,6 @@ A very simple way to handle dates is provided by the `getdate()` method. It retu
 
 
 #### _Seen methods:_
-
 - `for()`
   <br><br>
 
