@@ -3,6 +3,7 @@ Here you can find some exercises I made during my Certificate of Higher Educatio
 <br><br>
 
 
+
 ## [Example 1: Links_Inside_PHP](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 HTML5 allows us to insert PHP tags inside a web page's body. These tags contain executable PHP code. In this case, we are using the `echo()` function to print a `<a href="#">` tag inside the HTML body, creating a reference to another `.php` file.
 
@@ -10,6 +11,7 @@ HTML5 allows us to insert PHP tags inside a web page's body. These tags contain 
 
 - `echo()`
   <br><br>
+
 
 
 ## [Example 2: Variables](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
@@ -23,6 +25,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
+
 ## [Example 3: Insert PHP code in a HTML block](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 
@@ -30,6 +33,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 - `echo()`
   <br><br>
+
 
 
 ## [Example 4: Insert Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
@@ -44,6 +48,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
+
 ## [Example 5: Login Form](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 
@@ -52,6 +57,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `<form action="file.php">`
 - `<input type="submit">`
   <br><br>
+
 
 
 ## [Example 6: Adding & Multiplying](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
@@ -63,9 +69,8 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
+
 ## [Example 7: Sessions - Hold Information](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
-
-
 ### [Example 7.2: Cookies](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 
@@ -81,6 +86,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
+
 ## [Example 8: Control Session](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 #### _Seen methods:_
@@ -89,6 +95,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `$_SESSION[]`
 - `switch(){}`
   <br><br>
+
 
 
 ## [Example 9: Cookies Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
@@ -101,6 +108,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `for(){}`
 - `var_dump()`
   <br><br>
+
 
 
 ## [Example 10: Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
@@ -116,6 +124,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
+
 ## [Example 11: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 #### [Example 11.2: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
@@ -129,12 +138,12 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
+
 ## [Example 12: MVC Controller](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 #### [Example 12.2: MVC View](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 #### [Example 12.3: MVC Model](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 #### _Seen methods:_
-
 - `function()`
 - `foreach()`
 - `include()`
@@ -142,44 +151,66 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
   <br><br>
 
 
-## [Example 13:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+## [Example 13:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13_Forms.php)
+#### [Example 13.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13.2_Show_Data)
 
 #### _Seen methods:_
-
-- `time()`
+- `$_GET[<value>]`
   <br><br>
 
 
-## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14_Form_Submit.php)
+#### [Example 14.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14.2_Show_Data.php)
 
 #### _Seen methods:_
-
+- `$_POST[<value>]`
+- `var_dump()`
+- `echo()`
+- `!isset()`
+- `$_COOKIE[<value>]`
+- `setcookie()`
 - `time()`
+- `unset($_COOKIE[<value>])`
   <br><br>
 
 
-## [Example 15:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+## [Example 15:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15_Form.php)
+#### [Example 15.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.2_Show_Data.php)
+#### [Example 15.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.3_Show_Data_Functions.php)
+
 
 #### _Seen methods:_
-
-- `time()`
+- `include()`
+- `echo()`
+- `function()`
+- `switch()`
   <br><br>
 
 
-## [Example 16:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+## [Example 16:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16_GET_Method_Form.php)
+#### [Example 16.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.2_Show_Data.php)
+#### [Example 16.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.3_Show_Data_Functions.php)
 
 #### _Seen methods:_
+- `include()`
+- `isset()`
+- `strlen()`
+- `return`
+- `$_GET[<value>]`
+  <br><br>
 
-- `time()`
-  <br><
-  br>
+
 
 ## [Example 17:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 #### _Seen methods:_
-
 - `time()`
   <br><br>
+
 
 
 ## [Extra 1: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
@@ -193,6 +224,7 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - ~~`strftime()`~~ _- deprecated_
 - `echo()`
   <br><br>
+
 
 
 ## [Extra 2: Insert Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
