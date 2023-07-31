@@ -1,5 +1,7 @@
 # Server Side Environment - Exercises
 Here you can find some exercises I made during my Certificate of Higher Education (HNC). We started from scratch, learning the PHP fundamentals and how to integrate it with other technologies like HTML5 to create forms and SQL to request data from a database.
+
+If you want to try these examples, check the last header, called: **INSTALLATION**. 
 <br><br>
 
 
@@ -8,17 +10,15 @@ Here you can find some exercises I made during my Certificate of Higher Educatio
 HTML5 allows us to insert PHP tags inside a web page's body. These tags contain executable PHP code. In this case, we are using the `echo()` function to print a `<a href="#">` tag inside the HTML body, creating a reference to another `.php` file.
 
 #### _Seen methods:_
-
 - `echo()`
   <br><br>
 
 
 
-## [Example 2: Variables](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 2: Variables](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_2_Variables.php)
 In PHP, like many other languages such as JavaScript, it is not necessary to specify the data type when allocating a variable. A remarkable difference is that every variable is prefixed with the symbol `$`. To define and initialize a constant, we use the function `define("MY_CONSTANT", value)`. This allows us to create a constant with a fixed value that cannot be changed throughout the script's execution.
 
 #### _Seen methods:_
-
 - `define()`
 - `(int)($variable)`
 - `round()`
@@ -26,21 +26,23 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 
 
-## [Example 3: Insert PHP code in a HTML block](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
-
+## [Example 3: Insert PHP code in a HTML block](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_3_Insert_PHP_Inside_HTML)
+This is another example about how HTML5 allows us to insert PHP code by using the `<?php>` tag. In this case, a reference to another file is created through the concatenation of two PHP variables inside a `<a href="#">` tag.
 
 #### _Seen methods:_
-
 - `echo()`
   <br><br>
 
 
 
-## [Example 4: Insert Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 4: Insert Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_4_Insert_Date.php)
+`time()` and `date()` are two PHP methods that we can implement in our code to show the date in many different ways. The `time()` method returns a numeric value representing the actual time in seconds since January 1st, 1970.
 
+On the other hand, the `date()` method requires the value from `time()` to format a date based on the string provided as the first parameter. The `date()` method works in this way: `date(string $format, int $timestamp = time()): string`. It returns a string with the indicated `$format` value. To see more about the syntax, check the [MANUAL](https://www.php.net/manual/es/function.date.php).
+
+A very simple way to handle dates is provided by the `getdate()` method. It returns an associative array based on the provided timestamp: `getdate(int $timestamp = time()): array`. This is how the last `echo` works, where we access an array by using the key words.
 
 #### _Seen methods:_
-
 - `time()`
 - `date()`
 - `getdate()`
@@ -286,3 +288,6 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 - `getdate()`
 - `echo()`
   <br><br>
+
+
+# INSTALLATION
