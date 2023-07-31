@@ -62,7 +62,7 @@ First contact with form data handling. Every form tag in HTML5 contains `action`
 
 
 ## [Example 6: Adding & Multiplying](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
-
+In PHP, like in many other languages, we can use the `for()` loop to iterate a task based on certain conditions.
 
 #### _Seen methods:_
 - `for()`
