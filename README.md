@@ -206,9 +206,59 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 
 ## [Example 17:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 17.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 17.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 17.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 #### _Seen methods:_
-- `time()`
+- `include()`
+- `function()`
+- `is_string()`
+- `echo()`
+- `while()`
+- `mysqli_query()`
+- `mysqli_fetch_assoc()`
+- `mysqli_num_rows()`
+- `mysqli_connect()`
+- `mysqli_connect_error()`
+- `mysqli_close()`
+- `die()`
+  <br><br>
+
+
+
+## [Example 17B:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 17B.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 17B.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 17B.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+#### _Seen methods:_
+- `mysqli_fetch_asssoc()`
+- `is_string()`
+- `while()`
+- `include()`
+- `!isset()`
+- `$_GET[<value>]`
+  <br><br>
+
+
+
+## [Example 18:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 18.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 18.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 18.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+#### _Seen methods:_
+- `include()`
+- `function()`
+- `while()`
+- `return`
+- `mysqli_fetch_assoc()`
+- `mysqli_query()`
+- `mysqli_num_rows()`
+- `mysqli_connect_error()`
+- `die()`
+- `mysqli_close()`
   <br><br>
 
 
