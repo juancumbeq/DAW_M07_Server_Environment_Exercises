@@ -51,7 +51,7 @@ A very simple way to handle dates is provided by the `getdate()` method. It retu
 
 
 
-## [Example 5: Login Form](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 5: Login Form](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_5_Login_Form.html)
 First contact with form data handling. Every form tag in HTML5 contains `action` and `method` attributes. The first one indicates the PHP file where the data will be sent, in this case: `Ex_2_Variables.php`. The second attribute indicates how the data will be sent. There are two alternatives: `GET` and `POST`. The `GET` method is used when we do not worry about privacy, so the form input data is sent through the URL after the `?` symbol. On the other hand, the `POST` method encrypts the data in the URL, so no one can read it.
 
 #### _Seen methods:_
@@ -61,7 +61,7 @@ First contact with form data handling. Every form tag in HTML5 contains `action`
 
 
 
-## [Example 6: Adding & Multiplying](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 6: Adding & Multiplying](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_6_Adding_Multiplying.php)
 In PHP, like in many other languages, we can use the `for()` loop to iterate a task based on certain conditions.
 
 #### _Seen methods:_
@@ -70,9 +70,27 @@ In PHP, like in many other languages, we can use the `for()` loop to iterate a t
 
 
 
-## [Example 7: Sessions - Hold Information](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
-### [Example 7.2: Cookies](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 7: Sessions - Hold Information](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_7_Session_Hold_Information.php)
+PHP has a way to keep information on the server for a specific user for certain periods of time, usually while the application is being used by the mentioned user. This concept is called: SESSION. Sessions are quite useful to keep data throughout the user's visit, such as login data, checkouts, preferences, etc.
 
+Without sessions, the server couldn't remember any information while switching between pages or user actions on the webpage.
+
+When a webpage is requested by a user, PHP creates a unique session (`session_start()`) for that user with an assigned ID, called the session ID.
+
+During the user interaction, data can be stored and retrieved by using the global variable: `$_SESSION`. This variable is an associative array, which means data can be accessed using a key, such as `$_SESSION["temps"]`.
+
+Once the interaction is finished, the method `session_destroy()` can be applied to erase any data related to the current session.
+
+### [Example 7.2: Cookies](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_7.2_Cookies.php)
+The sessions and cookies are two different mechanisms used by PHP to store data on the server side and client side, respectively.
+
+Cookies are small text files stored inside the client's browser and are used to keep specific client data, such as preferences, login data, etc.
+
+Cookies are sent automatically with every HTTP request to the server, and the server can access the data stored in them by using the global variable `$_COOKIE[]`.
+
+By using the method `setcookie( string $name, string $value = "", int $expires_or_options = 0, string $path = "", string $domain = "", bool $secure = false, bool $httponly = false ): bool`, a cookie can be created.
+
+As we can see, the variable `$_COOKIE` is an associative array, just like `$_SESSION`.
 
 #### _Seen methods:_
 - `session_start()`
@@ -87,7 +105,7 @@ In PHP, like in many other languages, we can use the `for()` loop to iterate a t
 
 
 
-## [Example 8: Control Session](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 8: Control Session](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_8_Session_Control.php)
 
 #### _Seen methods:_
 - `session_start()`
