@@ -1,7 +1,3 @@
-<!--
-
--->
-
 <?php
   # Si es la primera vez que cargamos el archivo la cookie no estará definida
   if (!isset($_COOKIE['repeticiones'])) {

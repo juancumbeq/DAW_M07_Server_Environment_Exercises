@@ -106,6 +106,9 @@ As we can see, the variable `$_COOKIE` is an associative array, just like `$_SES
 
 
 ## [Example 8: Control Session](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_8_Session_Control.php)
+In the last exercise, we saw how PHP handles sessions. In this exercise, we apply that knowledge in a real-case scenario.
+
+Once a user enters their credentials, PHP executes the `session_start()` method. After that, the existence of a value inside `$_SESSION['Usuario']` is checked. If the result is false, the value is created; otherwise, the data type `null` is assigned as the stored value
 
 #### _Seen methods:_
 - `session_start()`
@@ -116,7 +119,13 @@ As we can see, the variable `$_COOKIE` is an associative array, just like `$_SES
 
 
 
-## [Example 9: Cookies Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 9: Cookies Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_9_Cookies_Use.php)
+In exercise number 7, we saw how the variable `$_COOKIE[]` works. In this exercise, we implement an example of how data can be manipulated.
+
+Through an `if` block, we check the existence of `$_COOKIE['repeticiones']`. If the result is false, the cookie is created and printed. Otherwise, we access the data stored inside that cookie, assigning it to another variable `$veces`.
+
+After that, a `for()` loop is executed using the value of `$veces` as part of the condition.
+
 
 #### _Seen methods:_
 
@@ -129,9 +138,9 @@ As we can see, the variable `$_COOKIE` is an associative array, just like `$_SES
 
 
 
-## [Example 10: Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Example 10: Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10_Cookies_Programs_Use.php)
 
-#### [Example 10.2 - Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+#### [Example 10.2 - Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10.2_Cookies_Programs_Use.php)
 
 #### _Seen methods:_
 
