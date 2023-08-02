@@ -241,14 +241,47 @@ The explode() method returns an array, so we can access the elements contained i
 
 
 
-## [Example 12: MVC Controller](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12_MVC_Controller.php)
+## [Example 12: MVC View](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12_MVC_View.php)
+The MVC, or Model-View-Controller, is an architectural pattern widely used in software development. MVC divides the application into three main components:
 
+- Model: which handles logic and data.
+- View: which handles the user interface.
+- Controller: which handles the interaction between the Model and the View.
 
-#### [Example 12.2: MVC View](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.2_MVC_View.php)
+This pattern promotes modularity, code reusability, and maintainability, by clearly separating responsibilities, allowing developers to work on specific parts of the application without affecting other parts.
 
+``````php
+<?php
+    // VIEW
+    // Importamos las otras partes del proyecto
+    include 'Ex_12.2_MVC_Controller.php';
+    include 'Ex_12.3_MVC_Model.php';
+
+    // $compra es un array de 'Ex_12.3_MVC_Model.php'que pasamos como parámetro a 'Ex_12.2_MVC_Controller.php' para que proceda a la ejecución de la función con esos valores.
+    enumerarElementos($compra);
+  ?>
+``````
+In this code block, we import functions and data from other files using the include `method()`. By using `enumerarElementos($compra)`, we are calling a Controller function and sending Model data as a parameter. This function will return an HTML5 code block with specific information to the View.
+
+#### [Example 12.2: MVC Controller](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.2_MVC_Controller.php)
+``````php
+<?php
+    // CONTROLLER
+    function enumerarElementos ($listaDeCosas){
+      foreach ($listaDeCosas as $cosa){
+        echo '<li>'.$cosa.'</li>';
+      }
+    }
+?>
+``````
 
 #### [Example 12.3: MVC Model](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.3_MVC_Model.php)
-
+``````php
+<?php
+    // MODEL
+    $compra = array('Tomates','Patatas','Lechugas','Macarrones');
+?>
+``````
 
 #### _Seen methods:_
 - `function()`
