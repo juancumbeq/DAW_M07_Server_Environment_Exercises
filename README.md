@@ -9,6 +9,20 @@ If you want to try these examples, check the last header, called: **INSTALLATION
 ## [Example 1: Links_Inside_PHP](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 HTML5 allows us to insert PHP tags inside a web page's body. These tags contain executable PHP code. In this case, we are using the `echo()` function to print a `<a href="#">` tag inside the HTML body, creating a reference to another `.php` file.
 
+``````html
+<body>
+  <ul>
+    <li>
+      <!--ESTA LÍNEA MUESTRA "LO PRIMERO" COMO UN ELEMENTO DE UNA LISTA. LA PALABRA "PRIMERO" ES UN LINK QUE AL CLICAR NOS LLEVA AL DOCUMENTO "HOLA MUNDO.PHP"-->
+      <?php echo "Lo <a href='Ex_1.2_Hello_World.php'> primero </a>" ?>
+    </li>
+    <li>
+      <?php echo "Lo segundo" ?>
+    </li>
+  </ul>
+</body>
+``````
+
 #### _Seen methods:_
 - `echo()`
   <br><br>
@@ -17,6 +31,22 @@ HTML5 allows us to insert PHP tags inside a web page's body. These tags contain 
 
 ## [Example 2: Variables](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_2_Variables.php)
 In PHP, like many other languages such as JavaScript, it is not necessary to specify the data type when allocating a variable. A remarkable difference is that every variable is prefixed with the symbol `$`. To define and initialize a constant, we use the function `define("MY_CONSTANT", value)`. This allows us to create a constant with a fixed value that cannot be changed throughout the script's execution.
+
+``````php
+<?php
+    $texto = "caracteres"; 
+    $entero = 2021;
+    $decimal = 99.9;
+    define("constante", 100); 
+
+    echo "Esto es una cadena de " .$texto. "</br>"; 
+
+    echo "El " .$entero. " es un número entero y podemos hacer cosas con él, como por ejemplo: " .(int)($entero + constante). "</br>";
+
+    /* ESTE MÉTODO NOS PERMITE REDONDEAR UN DECIMAL AL ENTERO MÁS PRÓXIMO */
+    echo "Esto también es posible: " .$decimal. " es un número en coma flotante y permite operaciones como: " .round($decimal). "</br>";
+  ?>
+``````
 
 #### _Seen methods:_
 - `define()`
@@ -28,6 +58,25 @@ In PHP, like many other languages such as JavaScript, it is not necessary to spe
 
 ## [Example 3: Insert PHP code in a HTML block](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_3_Insert_PHP_Inside_HTML)
 This is another example about how HTML5 allows us to insert PHP code by using the `<?php>` tag. In this case, a reference to another file is created through the concatenation of two PHP variables inside a `<a href="#">` tag.
+
+``````php
+<body>
+  <!-- INSERTAR PHP DENTRO DE HTML -->
+  <?php
+    $direccion = "Ex_2_Variables";
+    $extension = ".php";
+    $imagen = "Ex_3.2_photo.jpg";
+  ?>
+
+  <a href="<?php echo $direccion.$extension?>">
+    Este enlace se forma a partir de las variables definidas en PHP
+  </a>
+  </br>
+
+  <img src="<?php echo $imagen?>" alt="">
+
+</body>
+``````
 
 #### _Seen methods:_
 - `echo()`
@@ -42,6 +91,24 @@ On the other hand, the `date()` method requires the value from `time()` to forma
 
 A very simple way to handle dates is provided by the `getdate()` method. It returns an associative array based on the provided timestamp: `getdate(int $timestamp = time()): array`. This is how the last `echo` works, where we access an array by using the key words.
 
+``````php
+<?php
+  $time =  time();
+  echo $time;
+  $hoy = 64651692022;
+
+  echo '<h1> Mostramos la feha de diferentes maneras: </h1>';
+
+  echo 'Utilizando el método: date("Y-m-d", $t):'.'<b>'.date("Y-m-d-z", $time).'</b> <br>';
+
+  echo 'Utilizando date("l jS \of F Y H:i:s A"):'.'<b>'.date("l jS \of F Y H:i:s A", $time).'</b> <br>';
+
+  $fecha = getdate(date("U"));
+
+  echo 'Utilizando getdate(date("U")); muestra '.'<b>'."$fecha[weekday], $fecha[month] $fecha[mday], $fecha[year] - $fecha[hours]:$fecha[minutes]:$fecha[seconds]".'</b> <br>';
+?>
+``````
+
 #### _Seen methods:_
 - `time()`
 - `date()`
@@ -54,6 +121,23 @@ A very simple way to handle dates is provided by the `getdate()` method. It retu
 ## [Example 5: Login Form](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_5_Login_Form.html)
 First contact with form data handling. Every form tag in HTML5 contains `action` and `method` attributes. The first one indicates the PHP file where the data will be sent, in this case: `Ex_2_Variables.php`. The second attribute indicates how the data will be sent. There are two alternatives: `GET` and `POST`. The `GET` method is used when we do not worry about privacy, so the form input data is sent through the URL after the `?` symbol. On the other hand, the `POST` method encrypts the data in the URL, so no one can read it.
 
+``````html
+<body>
+  <!-- EJEMPLO DE COMO MEDIANTE UN FORMULARIO PODEMOS ENVIAR DATOS A UN ARCHIVO PHP, EN ESTE CASO AL ARCHIVO Ex_2_Variables.php. ESTE ARCHIVO NO HACE NADA CON LOS DATOS, SÓLO LOS RECIBE-->
+  <form name="formulario" action="Ex_2_Variables.php" method="post">
+    <h1>FORMULARIO WEB</h1>
+    <label for="">Usuario</label>
+    <input type="text" name="nombre" value=""/>
+
+    <label for="">Contraseña</label>
+    <input type="password" name="contraseña" value=""/>
+
+    <input type="submit" name="enviar" value="Enviar">
+    <input type="reset" name="cancelar" value="Cancelar">
+  </form>
+</body>
+``````
+
 #### _Seen methods:_
 - `<form action="file.php">`
 - `<input type="submit">`
@@ -63,6 +147,26 @@ First contact with form data handling. Every form tag in HTML5 contains `action`
 
 ## [Example 6: Adding & Multiplying](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_6_Adding_Multiplying.php)
 In PHP, like in many other languages, we can use the `for()` loop to iterate a task based on certain conditions.
+
+``````php
+<?php
+  $sumarPares = 0;
+  $multiImpares = 1;
+
+  for ($i=0; $i <=20 ; $i++) { 
+    # Si el módulo de $i entre 2 es cero implica que no hay resto por lo que es un número par.
+    if ($i % 2 == 0) {
+      $sumarPares += $i;
+    } 
+    else {
+      $multiImpares *= $i;
+    }
+  }
+
+  echo 'La suma de los 10 primeros números pares es: '.$sumarPares.'<br>';
+  echo 'El producto de los 10 primeros números impares es: '.$multiImpares.'<br>';
+?> 
+``````
 
 #### _Seen methods:_
 - `for()`
@@ -81,6 +185,25 @@ During the user interaction, data can be stored and retrieved by using the globa
 
 Once the interaction is finished, the method `session_destroy()` can be applied to erase any data related to the current session.
 
+``````php
+<?php
+  session_start();
+
+  if (!isset($_SESSION["temps"])) {
+    $_SESSION["temps"] = 0;
+  } else {
+    $_SESSION["temps"] = time();
+    session_destroy(); 
+  }
+
+  echo $_SESSION["temps"];
+  # https://www.php.net/manual/es/ref.session.php
+
+  $matriz = array(1,1,2,2,3,3,4,4,5,5);
+  var_dump($matriz);
+?>
+``````
+
 #
 ### [Example 7.2: Cookies](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_7.2_Cookies.php)
 The sessions and cookies are two different mechanisms used by PHP to store data on the server side and client side, respectively.
@@ -93,6 +216,12 @@ By using the method `setcookie( string $name, string $value = "", int $expires_o
 
 As we can see, the variable `$_COOKIE` is an associative array, just like `$_SESSION`.
 
+``````php
+<?php
+  setcookie('Ilerna', 'Hola a todos', time() + 10);
+  echo $_COOKIE['Ilerna'];
+?>
+``````
 #### _Seen methods:_
 - `session_start()`
 - `session_destroy()`
@@ -111,6 +240,28 @@ In the last exercise, we saw how PHP handles sessions. In this exercise, we appl
 
 Once a user enters their credentials, PHP executes the `session_start()` method. After that, the existence of a value inside `$_SESSION['Usuario']` is checked. If the result is false, the value is created; otherwise, the data type `null` is assigned as the stored value
 
+``````php
+<?php
+  session_start();
+
+  if (!isset($_SESSION['Usuario'])) {
+    $_SESSION['Usuario'] = 'Onliner';
+  } else {
+    $_SESSION['Usuario'] = null; // A diferencia de JavaScript donde null es un tipo de dato, en PHP null es vacío.
+  }
+
+  switch ($_SESSION['Usuario']) {
+    case 'Onliner':
+      echo 'El valor de la variable de sesión es '.$_SESSION['Usuario'];
+      break;
+    
+    default:
+      echo 'La variable de sesión no está definida';
+      break;
+  }  
+?>
+``````
+
 #### _Seen methods:_
 - `session_start()`
 - `!isset()`
@@ -127,6 +278,29 @@ Through an `if` block, we check the existence of `$_COOKIE['repeticiones']`. If 
 
 After that, a `for()` loop is executed using the value of `$veces` as part of the condition.
 
+``````php
+<?php
+  if (!isset($_COOKIE['repeticiones'])) {
+    # Creamos la cookie dándole el nombre de repeticiones, valor de 10 y una duración de 5 segundos
+    setcookie('repeticiones', 10, time() + 5);
+    echo 'Se ha creado la cookie';
+
+    # Si queremos ver el valor de la cookie nos da error, porque es como si no existiera. Una vez recargamos la página podemos ver su valor, el cuál aunque lo introduzcamos como tipo number, lo recuperamos como string.
+    echo $_COOKIE['repeticiones'];
+
+  } else {
+    # Si la cookie ya está definida accedemos a su valor y lo guardamos dentro de la variable $veces
+    echo 'Ya está definida la cookie <br>';
+    $veces = $_COOKIE['repeticiones'];
+
+    # Usamos $veces como valor máximo para las iteraciones del bucle for
+    for ($i=0; $i < $veces; $i++) { 
+      echo 'Esta es la repetición número: '.($i + 1).'<br>';
+    }
+  }
+  var_dump($_COOKIE['repeticiones']);
+?>
+``````
 
 #### _Seen methods:_
 
