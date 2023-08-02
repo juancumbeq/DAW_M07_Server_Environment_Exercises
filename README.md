@@ -140,7 +140,6 @@ After that, a `for()` loop is executed using the value of `$veces` as part of th
 
 ## [Example 10: Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10_Cookies_Programs_Use.php)
 In PHP there is no data-type such as tuple, like python or other languages have. In order to create something similar, an associative array is an option. In this data structure values can be stored and accessed by using a key (string or number) instead of a numeric index as in the case of traditional arrays.
-
 ````php
 <?php
   $opciones = [
@@ -148,16 +147,34 @@ In PHP there is no data-type such as tuple, like python or other languages have.
     'b' => 'Soy vegetariano',
     'c' => 'Soy flexitariano'
   ];
+  $opcionElegida = $opciones['b'];
+  echo $opcionElegida.'<br>';
+  setcookie('eleccion', $opcionElegida, time() + 10);
+  echo "Cookie establecida";
 ?>
 ````
-
 In this exeample we are creating a cookie based on a value stored in an associative array.
 
-
 #### [Example 10.2 - Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10.2_Cookies_Programs_Use.php)
+````php
+<?php
+  if (isset($_COOKIE['eleccion'])) {
+    if($_COOKIE['eleccion']=='Soy vegano'||
+    $_COOKIE['eleccion']=='Soy vegetariano'){
+      echo 'Compre gazpacho';
+    }
+    else {
+      echo 'Compre pollo';
+    }
+  } 
+  else {
+    echo 'Compre gazpacho o pollo';
+  }
+?>
+````
+In this second part, we are checking the existence of the previously created cookie from the first part. If the result is true, we evaluate its value and print something on the screen.
 
 #### _Seen methods:_
-
 - `time()`
 - `setcookie()`
 - `isset()`
@@ -167,6 +184,21 @@ In this exeample we are creating a cookie based on a value stored in an associat
 
 
 ## [Example 11: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_11_PHP_Functions.php)
+In this exercise we are applying knowledge about the cookies and how they can be used to store information while at the same time we navigate through different pages.
+````php
+<?php
+    if (!isset($_COOKIE['valor'])) {
+      $aleatorio = rand(0, 10);
+      
+      // implode convierte una lista/array en un string
+      setcookie('valor', implode(';', [$aleatorio, time()]), time() + 20);
+    } else {
+      # code...
+    }
+  ?>
+````
+
+
 #### [Example 11.2: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_11.2_PHP_Functions.php)
 
 #### _Seen methods:_
