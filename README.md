@@ -343,7 +343,7 @@ As we can see $_GET['nombre'] and $_GET['apellido'] are data received by the `Ex
 ## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14_Form_Submit.php)
 
 
----
+#
 #### [Example 14.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14.2_Show_Data.php)
 
 #### _Seen methods:_
