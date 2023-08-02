@@ -184,12 +184,12 @@ In this second part, we are checking the existence of the previously created coo
 
 
 ## [Example 11: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_11_PHP_Functions.php)
-In this exercise we are applying knowledge about the cookies and how they can be used to store information while at the same time we navigate through different pages.
+In this exercise, we are applying knowledge about cookies and how they can be used to store information while navigating through different pages.
 ````php
 <?php
     if (!isset($_COOKIE['valor'])) {
       $aleatorio = rand(0, 10);
-      
+
       // implode convierte una lista/array en un string
       setcookie('valor', implode(';', [$aleatorio, time()]), time() + 20);
     } else {
@@ -198,11 +198,40 @@ In this exercise we are applying knowledge about the cookies and how they can be
   ?>
 ````
 
+We check the existence of `$_COOKIE['valor']`. If it's negative, we create one using a random number between 0 and 10 and the current time value in seconds.
+
+The value stored in this cookie represents an array returned by the `implode()` method. This text file will exist for the next 20 seconds from the current time.
 
 #### [Example 11.2: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_11.2_PHP_Functions.php)
+In this second part, we extract information from the previously created cookie. We saw that the stored value was a string created from an array, so we have to apply the reverse process to convert that string back into an array.
+``````php
+<?php
+    // explode() hace la función contraria a implode(), crea un array a partir de un string estructurado
+    var_dump($_COOKIE['valor']);
+
+    $recuperar = explode(';', $_COOKIE['valor']); // Esto es un array
+    $valor = $recuperar[0];
+    $cuando = $recuperar[1];
+  ?>
+``````
+
+``````html
+<h1>El valor de la cookie es 
+    <span> <?php echo $valor;?> </span> creada el 
+    <span> <?php echo date('D, d M Y H:i:s', $cuando)?> </span> 
+</h1>
+``````
+
+``````php
+<?php
+    for ($i=0; $i < $valor; $i++) { 
+      echo 'Repeticiones </br>';
+    }
+?>
+``````
+The explode() method returns an array, so we can access the elements contained inside through a numeric index. After that, the values are completely manipulable, so we can use HTML5 tags to display them on the screen or execute a for() loop.
 
 #### _Seen methods:_
-
 - `!isset()`
 - `rand()`
 - `setcookie()`
