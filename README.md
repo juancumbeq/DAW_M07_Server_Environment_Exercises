@@ -81,6 +81,7 @@ During the user interaction, data can be stored and retrieved by using the globa
 
 Once the interaction is finished, the method `session_destroy()` can be applied to erase any data related to the current session.
 
+---
 ### [Example 7.2: Cookies](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_7.2_Cookies.php)
 The sessions and cookies are two different mechanisms used by PHP to store data on the server side and client side, respectively.
 
@@ -155,6 +156,7 @@ In PHP there is no data-type such as tuple, like python or other languages have.
 ````
 In this exeample we are creating a cookie based on a value stored in an associative array.
 
+---
 #### [Example 10.2 - Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10.2_Cookies_Programs_Use.php)
 ````php
 <?php
@@ -202,6 +204,7 @@ We check the existence of `$_COOKIE['valor']`. If it's negative, we create one u
 
 The value stored in this cookie represents an array returned by the `implode()` method. This text file will exist for the next 20 seconds from the current time.
 
+---
 #### [Example 11.2: PHP Functions](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_11.2_PHP_Functions.php)
 In this second part, we extract information from the previously created cookie. We saw that the stored value was a string created from an array, so we have to apply the reverse process to convert that string back into an array.
 ``````php
@@ -263,6 +266,7 @@ This pattern promotes modularity, code reusability, and maintainability, by clea
 ``````
 In this code block, we import functions and data from other files using the include `method()`. By using `enumerarElementos($compra)`, we are calling a Controller function and sending Model data as a parameter. This function will return an HTML5 code block with specific information to the View.
 
+---
 #### [Example 12.2: MVC Controller](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.2_MVC_Controller.php)
 ``````php
 <?php
@@ -274,7 +278,7 @@ In this code block, we import functions and data from other files using the incl
     }
 ?>
 ``````
-
+---
 #### [Example 12.3: MVC Model](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.3_MVC_Model.php)
 ``````php
 <?php
@@ -293,7 +297,42 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 13:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13_Forms.php)
-#### [Example 13.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13.2_Show_Data)
+PHP forms allow us to collect and process data entered by users on webpages. Generally, a form is made up of inputs such as text fields, action buttons, checkboxes, and submit buttons, among others. These forms send the information to the server for processing.
+
+The data entered by the user is sent to the server as part of an HTTP request. After that, PHP can access the data using superglobals like $_GET or $_POST according to the sending method defined in the form.
+``````html
+<body>
+  <form action="Ex_13.2_Show_Data.php" method="GET">
+    <p>
+      Introduce tu nombre <input type="text" name="nombre">
+    </p>
+    <p>
+      Introduce tu apellido <input type="text" name="apellido">
+    </p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+</body>
+``````
+We can insert a form into an HTML5 file using the <form> tag. Two critical attributes are involved: action and method.
+
+- `action="Ex_13.2_Show_Data.php"`: indicates the PHP file that will process the collected data.
+- `method="GET"`: indicates how the data will be sent to the PHP file specified in the action attribute.
+
+---
+#### [Example 13.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13.2_Show_Data.php)
+``````php
+<body>
+  <p>
+    El nombre introducido es: <?php echo $_GET['nombre']?>, y el apellido es: <?php echo $_GET['apellido']?>
+  </p>
+  <br>
+  <a href="Ex_13_Forms.php">Volver</a>
+</body>
+``````
+As we can see $_GET['nombre'] and $_GET['apellido'] are data received by the `Ex_13.2_Show_Data` file from `Ex_13_Forms.php` using the GET method. 
+
 
 #### _Seen methods:_
 - `$_GET[<value>]`
@@ -302,6 +341,9 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14_Form_Submit.php)
+
+
+---
 #### [Example 14.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14.2_Show_Data.php)
 
 #### _Seen methods:_
@@ -318,7 +360,13 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 15:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15_Form.php)
+
+
+---
 #### [Example 15.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.2_Show_Data.php)
+
+
+---
 #### [Example 15.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.3_Show_Data_Functions.php)
 
 
@@ -332,7 +380,13 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 16:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16_GET_Method_Form.php)
+
+
+---
 #### [Example 16.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.2_Show_Data.php)
+
+
+---
 #### [Example 16.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.3_Show_Data_Functions.php)
 
 #### _Seen methods:_
@@ -346,8 +400,16 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 17:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17_MVC_View.php)
+
+---
 #### [Example 17.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.2_MVC_Controller_Show_Data.php)
+
+
+---
 #### [Example 17.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.3_MVC_Model_Data_Handling.php)
+
+
+---
 #### [Example 17.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.4_MVC_Model_Database.php)
 
 #### _Seen methods:_
@@ -368,8 +430,17 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 17B:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_View.php)
+
+
+---
 #### [Example 17B.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.2_MVC_Controller_Show_Data.php)
+
+
+---
 #### [Example 17B.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.3_MVC_Model_Data_Handling.php)
+
+
+---
 #### [Example 17B.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.4_MVC_Model_Database.php)
 
 #### _Seen methods:_
@@ -384,8 +455,16 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Example 18:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18_MVC_View.php)
+
+---
 #### [Example 18.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18.2_MVC_Controller_Show_Data.php)
+
+
+---
 #### [Example 18.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18.3_MVC_Model_Data_Handling.php)
+
+
+---
 #### [Example 18.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18.4_MVC_Model_Database.php)
 
 #### _Seen methods:_
@@ -404,6 +483,9 @@ In this code block, we import functions and data from other files using the incl
 
 
 ## [Extra 1: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+
+
+---
 #### [Extra 1.2: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
 
 #### _Seen methods:_
