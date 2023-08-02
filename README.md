@@ -242,8 +242,13 @@ The explode() method returns an array, so we can access the elements contained i
 
 
 ## [Example 12: MVC Controller](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12_MVC_Controller.php)
+
+
 #### [Example 12.2: MVC View](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.2_MVC_View.php)
+
+
 #### [Example 12.3: MVC Model](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_12.3_MVC_Model.php)
+
 
 #### _Seen methods:_
 - `function()`
