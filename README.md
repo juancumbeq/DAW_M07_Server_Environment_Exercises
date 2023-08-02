@@ -139,6 +139,20 @@ After that, a `for()` loop is executed using the value of `$veces` as part of th
 
 
 ## [Example 10: Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10_Cookies_Programs_Use.php)
+In PHP there is no data-type such as tuple, like python or other languages have. In order to create something similar, an associative array is an option. In this data structure values can be stored and accessed by using a key (string or number) instead of a numeric index as in the case of traditional arrays.
+
+````php
+<?php
+  $opciones = [
+    'a' => 'Soy vegano',
+    'b' => 'Soy vegetariano',
+    'c' => 'Soy flexitariano'
+  ];
+?>
+````
+
+In this exeample we are creating a cookie based on a value stored in an associative array.
+
 
 #### [Example 10.2 - Cookies Programs Use](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_10.2_Cookies_Programs_Use.php)
 
