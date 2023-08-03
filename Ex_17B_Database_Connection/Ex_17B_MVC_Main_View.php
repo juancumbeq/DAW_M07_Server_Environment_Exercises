@@ -17,7 +17,7 @@
   </form>
 
   <?php
-    include 'Ex_17B.2_MVC_Controller_Show_Data.php';
+    include 'Ex_17B.3_MVC_Model_Data_Handling.php';
 
     // Si venimos de borrar, eliminamos el elemento antes de pintar
     if (isset($_POST['borrar'])) {

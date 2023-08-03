@@ -12,7 +12,7 @@
 </head>
 <body>
   <?php
-    include 'Ex_17B.3_MVC_Model_Data_Handling';
+    include 'Ex_17B.3_MVC_Model_Data_Handling.php';
 
     // Siempre venimos del formulario
     // otroDistrito solo estará definida si se ha marcado la casilla
