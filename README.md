@@ -507,7 +507,6 @@ We can insert a form into an HTML5 file using the <form> tag. Two critical attri
 ``````
 As we can see $_GET['nombre'] and $_GET['apellido'] are data received by the `Ex_13.2_Show_Data` file from `Ex_13_Forms.php` using the GET method. 
 
-
 #### _Seen methods:_
 - `$_GET[<value>]`
   <br><br>
@@ -515,10 +514,39 @@ As we can see $_GET['nombre'] and $_GET['apellido'] are data received by the `Ex
 
 
 ## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14_Form_Submit.php)
+This is another example of how PHP, together with HTML5, collects and processes data entered by users in a form. However, in this case, the chosen method is POST.
+``````html
+<body>
+  <form action="Ex_14.2_Show_Data.php" method="POST">
+    <label for="producto">Producto</label>
+    <input type="text" name="producto"> <br>
 
+    <label for="cantidad">Cantidad</label>
+    <input type="number" name="cantidad"> <br> <br>
 
+    <input type="submit" name="comprar" value="comprar">
+  </form>
+</body>
+``````
 #
 #### [Example 14.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14.2_Show_Data.php)
+``````php
+<?php
+  if (!isset($_COOKIE['lista'])) {
+    setcookie('lista', '', time() + 200);
+  } else {
+    $listaCompra = $_COOKIE['lista'];
+  }
+  // Se pueden utilizar formas contrídas para agilizar la programación ya que '.=' hace lo mismo que: $listaCompra = $listaCompra . $_POST['producto'] . $_POST['cantidad'];
+
+  $listaCompra .= $_POST['producto'] . ' ' . $_POST['cantidad'];
+  echo $listaCompra;
+  setcookie('lista', $listaCompra.'<br>', time() + 200);
+?>
+``````
+We check if `$_COOKIE['lista']` is already set. If it is not, the cookie is created; otherwise, the value stored inside is assigned to `$listaCompra`. In any case, the data received by the `POST` method is added to the current value of `$listaCompra`, which could be `null` if the cookie was not set previously.
+
+After that, the cookie called lista is overwritten, storing the accumulated value of `$listaCompra`.
 
 #### _Seen methods:_
 - `$_POST[<value>]`
@@ -534,15 +562,87 @@ As we can see $_GET['nombre'] and $_GET['apellido'] are data received by the `Ex
 
 
 ## [Example 15:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15_Form.php)
+This HTML5 file is a form whose data will be processed by `Ex_15_Show_Data.php`, sending the data through the POST method.
+``````html
+<body>
+  <h1>Formulario de creación de usuario</h1>
+  <form action="Ex_15_Show_Data.php" method="POST" id="creacion">
 
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Selecciona una clase:
+      <select name="clase" id="selector" form="creacion">
+        <option value="profesor">Profesor</option>
+        <option value="alumno">Alumno</option>
+        <option value="unknown">Unkown</option>
+      </select>
+    </p>
 
+    <p>Selecciona un género: <br>
+      <input type="radio" name="genero" value="masculino">
+      <label for="">Masculino</label><br>
+      <input type="radio" name="genero" value="femenino">
+      <label for="">Femenino</label><br>
+      <input type="radio" name="genero" value="neutro">
+      <label for="">Neutro</label><br>
+    </p>
+
+    <input type="submit" name="accion" value="Enviar">
+  </form>
+</body>
+``````
 #
 #### [Example 15.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.2_Show_Data.php)
+``````php
+<body style="text-align: center;">
 
+  <?php include 'Ex_15.3_Show_Data_Functions.php';
+  echo $_POST['clase'].' '.$_POST['genero'];
+  ?>
 
+  <h1>Confirmar personaje</h1>
+  <h2><?php echo $_POST['nombre']?></h2>
+
+  <img src="<?php asignaClase($_POST['clase'])?>" alt="">
+  <img src="<?php asignaGenero($_POST['genero'])?>" alt="">
+  <br>
+  <a href="Ex_15_Form.php">Volver</a>
+</body>
+``````
+In this second part, the data collected from the form is used as a parameter in the functions: `asignarClase()` and `asignarGenero()`. These functions are stored inside another file; however, the `include()` method allows us to call variables and functions from outside the current file.
 #
 #### [Example 15.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.3_Show_Data_Functions.php)
+``````php
+<?php
+  function asignaClase($clase){
+    switch ($clase) {
+      case 'profesor':
+        echo 'Ex_15.2_Show_Data.jpg';
+        break;
+      case 'alumno':
+        echo 'Ex_15.2_Show_Data.jpg';
+        break;
+      case 'unknown':
+        echo 'Ex_15.2_Show_Data.jpg';
+        break;
+    }
+  }
 
+  function asignaGenero($genero){
+    switch ($genero) {
+      case 'masculino':
+        echo 'Ex_15.2_Show_Data.jpg';
+        break;
+      case 'femenino':
+        echo 'Ex_15.2_Show_Data.jpg';
+        break;
+      case 'neutro':
+        echo 'Ex_15.2_Show_Data.jpg';
+        break;
+    }
+  }
+?>
+``````
+The functions `asignarClase()` and `asignarGenero()` will return a string, which represents an address to a `.jpg` file. This address will be the `img` tag's `src` attribute.
 
 #### _Seen methods:_
 - `include()`

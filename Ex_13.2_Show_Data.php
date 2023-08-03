@@ -24,7 +24,7 @@
     El nombre introducido es: <?php echo $_GET['nombre']?>, y el apellido es: <?php echo $_GET['apellido']?>
   </p>
   <br>
-  <a href="Ex_13_Forms.php">Volver</a>
+  <a href="Ex_13_Forms.html">Volver</a>
 </body>
 
 </html>

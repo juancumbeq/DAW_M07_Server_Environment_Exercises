@@ -48,7 +48,7 @@
     setcookie('lista', $listaCompra.'<br>', time() + 200);
   ?>
   <br>
-  <a href="Ex_14_Form_Submit.php">Volver</a>
+  <a href="Ex_14_Form_Submit.html">Volver</a>
 
   <?php
     // Para borrar la cookie, volvemos a crear una cookie indicando que el tiempo de duración de la misma está en el pasado, de esta manera borramos la cookie físicamente.
