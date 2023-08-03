@@ -819,7 +819,7 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 
 
-## [Extra 1: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Extra 1: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Extra_1_Spanish_Date.php)
 Every time we ask PHP for a date using the `date()` method, it is displayed in English. So, in order to get a Spanish date, we can apply this technique based on arrays, one for the months and another for the weekdays.
 ``````php
 <?php
@@ -844,7 +844,7 @@ Every time we ask PHP for a date using the `date()` method, it is displayed in E
 ``````
 With date('w'), date('d'), and date('n'), we get the weekday numeric representation (0-6), the month day (01-31), and the numeric representation of the month (01-12). The -1 means we require a lower value because the range value returned by date('n') starts from 1, not 0, as the arrays do.
 #
-#### [Extra 1.2: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Extra_1_Spanish_Date.php)
+#### [Extra 1.2: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Extra_1.2_Spanish_Date_SetLocale.php)
 This example was another way we used to apply displaying dates in other languages. However, it is no longer useful because the `strftime()` method has been deprecated. This method was used to format a local time or date according to locale settings.
 
 The `setlocale()` method was used together with `strftime()` because the first one sets locale information.
