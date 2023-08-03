@@ -742,37 +742,6 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 
 ## [Example 17:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17_MVC_View.php)
-
-#
-#### [Example 17.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.2_MVC_Controller_Show_Data.php)
-
-
-#
-#### [Example 17.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.3_MVC_Model_Data_Handling.php)
-
-
-#
-#### [Example 17.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.4_MVC_Model_Database.php)
-
-#### _Seen methods:_
-- `include()`
-- `function()`
-- `is_string()`
-- `echo()`
-- `while()`
-- `mysqli_query()`
-- `mysqli_fetch_assoc()`
-- `mysqli_num_rows()`
-- `mysqli_connect()`
-- `mysqli_connect_error()`
-- `mysqli_close()`
-- `die()`
-  <br><br>
-
-
-
-## [Example 17B:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_View.php)
-
 ``````html
 <body>
   <h1>Conectando a la base de datos de países</h1>
@@ -784,7 +753,8 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 ``````
 
 #
-#### [Example 17B.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.2_MVC_Controller_Show_Data.php)
+#### [Example 17.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.2_MVC_Controller_Show_Data.php)
+
 ``````php
 <?php
   include 'Ex_17.3_MVC_Model_Data_Handling.php';
@@ -821,7 +791,7 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 ``````
 
 #
-#### [Example 17B.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.3_MVC_Model_Data_Handling.php)
+#### [Example 17.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.3_MVC_Model_Data_Handling.php)
 
 ``````php
 <?php
@@ -845,7 +815,7 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 ``````
 
 #
-#### [Example 17B.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.4_MVC_Model_Database.php)
+#### [Example 17.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.4_MVC_Model_Database.php)
 
 ``````php
 <?php
@@ -872,6 +842,41 @@ This file could be seen as the Controller of an MVC design pattern, because it c
   }
 ?>
 ``````
+
+#### _Seen methods:_
+- `include()`
+- `function()`
+- `is_string()`
+- `echo()`
+- `while()`
+- `mysqli_query()`
+- `mysqli_fetch_assoc()`
+- `mysqli_num_rows()`
+- `mysqli_connect()`
+- `mysqli_connect_error()`
+- `mysqli_close()`
+- `die()`
+  <br><br>
+
+
+
+## [Example 17B:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_View.php)
+
+
+
+#
+#### [Example 17B.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.2_MVC_Controller_Show_Data.php)
+
+
+#
+#### [Example 17B.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.3_MVC_Model_Data_Handling.php)
+
+
+
+#
+#### [Example 17B.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.4_MVC_Model_Database.php)
+
+
 
 #### _Seen methods:_
 - `mysqli_fetch_asssoc()`
