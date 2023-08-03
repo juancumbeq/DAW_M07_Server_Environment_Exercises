@@ -864,23 +864,35 @@ To fetch data, it is necessary to establish a connection with a database. So, th
 
 
 
-## [Example 17B:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_View.php)
+## [Example 17B: Main View](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_Main_View.php)
 
+``````html
 
-
-#
-#### [Example 17B.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.2_MVC_Controller_Show_Data.php)
-
+``````
 
 #
-#### [Example 17B.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.3_MVC_Model_Data_Handling.php)
+#### [Example 17B: Form View](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_Form_View.php)
 
-
+``````html
+``````
 
 #
-#### [Example 17B.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.4_MVC_Model_Database.php)
+#### [Example 17B.2: MVC Controller Show Data](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.2_MVC_Controller_Show_Data.php)
 
+``````html
+``````
 
+#
+#### [Example 17B.3: MVC Model Data Handling](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.3_MVC_Model_Data_Handling.php)
+
+``````html
+``````
+
+#
+#### [Example 17B.4: MVC Model Database](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.4_MVC_Model_Database.php)
+
+``````html
+``````
 
 #### _Seen methods:_
 - `mysqli_fetch_asssoc()`

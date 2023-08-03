@@ -27,7 +27,6 @@
     $codigoPais = $_POST['pais']; // CountryCode
     $poblacion = $_POST['poblacion']; // Population
 
-    # code...
     if (añadirCiudad($nombreCiudad, $codigoPais, $distrito, $poblacion)) {
       echo "<h1> Se ha añadido la nueva ciudad </h1>";
       echo "<p>" . $nombreCiudad . "</p>";
@@ -39,6 +38,6 @@
       echo "No se ha podido añadir";
     }
   ?>
-  <a href="Ex_17B_MVC_View">Pulse para volver al listado</a>
+  <a href="Ex_17B_MVC_Main_View.php">Pulse para volver al listado</a>
 </body>
 </html>

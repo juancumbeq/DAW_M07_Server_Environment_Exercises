@@ -7,11 +7,11 @@
   <title>Conectando a la base de datos de países</title>
 </head>
 <body>
-  <form action="ejemplo17_1_Formulario.php" method="POST">
+  <form action="Ex_17B_MVC_Form_View.php" method="POST">
     <input type="submit" value="Añadir Ciudad" name="anyade">
   </form>
 
-  <form action="ejemplo17_1_php" method="get">
+  <form action="Ex_17B_MVC_Main_View.php" method="GET">
     <input type="submit" value="Creciente" name="ordenar">
     <input type="submit" value="Decreciente" name="ordenar">
   </form>
@@ -20,11 +20,11 @@
     include 'Ex_17B.2_MVC_Controller_Show_Data.php';
 
     // Si venimos de borrar, eliminamos el elemento antes de pintar
-    if (issset($_POST['borrar'])) {
+    if (isset($_POST['borrar'])) {
       borrarCiudad($_POST['id']);
     }
 
-    // Si venimos de ordenar, indicamos cómo debemos ordenar la lista
+    // Si venimos del botón ordenar, indicamos cómo debemos ordenar la lista
     if (!isset($_GET['ordenar'])) {
       $orden = 'Creciente';
     } else {

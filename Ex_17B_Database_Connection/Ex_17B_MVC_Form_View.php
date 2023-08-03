@@ -8,10 +8,10 @@
 </head>
 <body>
   <?php
-    include 'ejemplo17_1_Controlador_MostrarDatos.php';
+    include 'Ex_17.2_MVC_Controller_Show_Data.php';
   ?>
 
-  <form action="añadir.php" method="post">
+  <form action="Ex_17B_MVC_Add_View.php" method="POST">
 
     <label>Nombre ciudad: </label>
     <input type="text" name="nombre">
