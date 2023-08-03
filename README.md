@@ -590,6 +590,7 @@ This HTML5 file is a form whose data will be processed by `Ex_15_Show_Data.php`,
   </form>
 </body>
 ``````
+
 #
 #### [Example 15.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.2_Show_Data.php)
 ``````php
@@ -609,6 +610,7 @@ This HTML5 file is a form whose data will be processed by `Ex_15_Show_Data.php`,
 </body>
 ``````
 In this second part, the data collected from the form is used as a parameter in the functions: `asignarClase()` and `asignarGenero()`. These functions are stored inside another file; however, the `include()` method allows us to call variables and functions from outside the current file.
+
 #
 #### [Example 15.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15.3_Show_Data_Functions.php)
 ``````php
@@ -667,6 +669,7 @@ This is a form using the GET method for data sending, which means the data goes 
   <!-- Forzamos la URL con un GET -->
 </body>
 ``````
+
 #
 #### [Example 16.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.2_Show_Data.php)
 As it happened in the previous exercise 15, this file shows the data collected by the form, making use of the `include()` method to call functions from `Ex_16.3_Show_Data_Functions.php`. These functions will return a string based on the parameter received.
@@ -682,6 +685,7 @@ As it happened in the previous exercise 15, this file shows the data collected b
   <a href="Ex_16_GET_Method_Form.html">Volver</a>
 </body>
 ``````
+
 #
 #### [Example 16.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.3_Show_Data_Functions.php)
 This file could be seen as the Controller of an MVC design pattern, because it contains all of the functions used in the entire example. These functions receive data and return another following a logic.
@@ -726,6 +730,7 @@ This file could be seen as the Controller of an MVC design pattern, because it c
   }
 ?>
 ``````
+
 #### _Seen methods:_
 - `include()`
 - `isset()`
@@ -768,17 +773,105 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 ## [Example 17B:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B_MVC_View.php)
 
+``````html
+<body>
+  <h1>Conectando a la base de datos de países</h1>
+  <?php
+    include 'Ex_17.2_MVC_Controller_Show_Data.php';
+    pintaListaCiudades();
+  ?>
+</body>
+``````
 
 #
 #### [Example 17B.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.2_MVC_Controller_Show_Data.php)
+``````php
+<?php
+  include 'Ex_17.3_MVC_Model_Data_Handling.php';
 
+  function pintaListaCiudades(){
+    $datos = getListaCiudades();
+    if (is_string($datos)) {
+      echo $datos; 
+    }
+    else {
+      echo "<table>\n
+              <tr>\n
+                <th>ID</th>\n
+                <th>Nombre</th>\n
+                <th>Código País</th>\n
+                <th>Comunidad</th>\n
+                <th>Población</th>\n
+              </tr>\n";
+      
+      while ($fila = mysqli_fetch_assoc($datos)) {
+        echo "<tr>\n
+                <td>" . $fila["ID"] . "</td>\n
+                <td>" . $fila["Name"] . "</td>\n
+                <td>" . $fila["CountryCode"] . "</td>\n
+                <td>" . $fila["District"] . "</td>\n
+                <td>" . $fila["Population"] . "</td>\n
+              </tr>\n";
+              
+      };
+      echo "</table>\n";
+    };
+  }
+?>
+``````
 
 #
 #### [Example 17B.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.3_MVC_Model_Data_Handling.php)
 
+``````php
+<?php
+  require "Ex_17.4_MVC_Model_Database.php";
+
+  function getListaCiudades(){
+
+    $DB = crearConexion('world');
+    $sql = 'SELECT ID, Name, CountryCode, District, Population FROM city ORDER BY Population ASC';
+    $result = mysqli_query($DB, $sql);
+
+    if(mysqli_num_rows($result) > 0){
+      return $result;
+    }
+    else {
+      echo 'No hay nada en la lista de ciudades.';
+    }
+    cerrarConexion($DB);
+  }
+?>
+``````
 
 #
 #### [Example 17B.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17B_Database_Connection/Ex_17B.4_MVC_Model_Database.php)
+
+``````php
+<?php
+  function crearConexion($database){
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+
+    $conexion = mysqli_connect($host, $user, $password, $database);
+
+    var_dump($conexion);
+
+    if (!$conexion) {
+      die("<br> Error de conexión con la base de datos: " . mysqli_connect_error());
+    }
+    else {
+      echo "<br> Conexión correcta con la base de datos: " . $database;
+    }
+      return $conexion;
+  }
+
+  function cerrarConexion($conexion){
+    mysqli_close($conexion);
+  }
+?>
+``````
 
 #### _Seen methods:_
 - `mysqli_fetch_asssoc()`
@@ -792,17 +885,141 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 
 ## [Example 18:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18_MVC_View.php)
+``````php
+<body>
+  <h1>Conectando a la base de datos de países</h1>
+
+  <?php
+    include 'Ex_18.2_MVC_Controller_Show_Data.php';
+
+    pintaListaCiudadesConIdiomas();
+  ?>
+</body>
+``````
 
 #
 #### [Example 18.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18.2_MVC_Controller_Show_Data.php)
+``````php
+<?php
+  include 'Ex_18.4_MVC_Model_Data_Handling.php';
 
+  function pintaIdiomas($ciudad){
+    $datos = getIdiomasDeUnaCiudad($ciudad);
+    $resultado = "<ul> \n";
+
+    while ($idioma = mysqli_fetch_assoc($datos)){
+      $resultado .= "<li>" . $idioma["Idioma"] . "</li>\n";
+    }
+    $resultado .= "</ul>";
+    return $resultado;
+  }
+
+  function pintaListaCiudadesConIdiomas(){
+    $datos = getListaCiudades();
+
+    if (is_string($datos)) {
+      echo $datos;
+    }
+    else {
+      echo "<table>\n
+              <tr>\n
+                <th>Nombre</th>\n
+                <th>Código País</th>\n
+                <th>Idiomas</th>\n
+              </tr>\n";
+    
+      while ($fila = mysqli_fetch_assoc($datos)) {
+        echo "<tr>\n
+              <td>" . $fila["Name"] . "</td>\n
+              <td>" . $fila["CountryCode"] . "</td>\n
+              <td>" . pintaIdiomas($fila["Name"]) . "</td>\n
+            </tr>\n";
+      };
+      echo "</table>";
+    }
+  }
+?>
+``````
 
 #
 #### [Example 18.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18.3_MVC_Model_Data_Handling.php)
+``````php
+<?php
+  require "Ex_18.3_MVC_Model_Database.php";
 
+  function getIdiomasDeUnaCiudad($ciudad){
+    // Nos conectamos a la base de datos world
+    $DB = crearConexion("world");
+
+    // Definimos la consulta para obtener los datos. Fijate que tenemos que poner las comillas en el WHERE para comprobar la variable.
+    $sql = "SELECT countrylanguage.Language as Idioma FROM city INNER JOIN countrylanguage ON city.CountryCode = countrylanguage.CountryCode WHERE city.Name = '" . $ciudad . "'; ";
+
+    // Hacemos la consulta y guardamos el resultado en $result
+    $result = mysqli_query($DB, $sql);
+
+    // Cerramos la conexión
+    cerrarConexion($DB);
+
+    // Si la consulta ha devuelto algún valor, devolvemos los valores.
+    if (mysqli_num_rows($result) > 0) {
+      return $result;
+      // Si no, enviamos un mensaje de error
+    }
+    else {
+      echo "No hay nada en la lista de ciudades";
+    }
+  }
+
+  function getListaCiudades(){
+    // Nos conectamos a la base de datos world
+    $DB = crearConexion("world");
+
+    // Definimos la consulta para obtener todos los datos de la tabla city
+    $sql = "SELECT ID, Name, CountryCode FROM city";
+
+    // Hacemos la consulta y guardamos el resultado en $result
+    $result = mysqli_query($DB, $sql);
+
+    // Cerramos la conexion
+    cerrarConexion($DB);
+
+    // Si la consulta ha devuelto algún valor, devolvemos los valores.
+    if (mysqli_num_rows($result) > 0) {
+      return $result;
+      // Si no, enviamos un mensaje de error.
+    }
+    else {
+      echo "No hay nada en la lista de ciudades";
+    }
+  }
+?>
+``````
 
 #
 #### [Example 18.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_18_Database_Connection/Ex_18.4_MVC_Model_Database.php)
+``````php
+<?php
+  function crearConexion($database){
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+
+    $conexion = mysqli_connect($host, $user, $password, $database);
+
+    if (!$conexion) {
+      die("<br> Error de conexión con la base de datos: " . mysqli_connect_error());
+    }
+    else {
+      echo "<br> Conexión correcta con la base de datos: " . $database;
+    }
+    return $conexion;
+  }
+
+  function cerrarConexion($conexion){
+    mysqli_close($conexion);
+  }
+?>
+``````
 
 #### _Seen methods:_
 - `include()`
