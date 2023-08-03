@@ -742,6 +742,9 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 
 ## [Example 17:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17_MVC_View.php)
+Previously, in exercise 12, we saw how the MVC design pattern works. With that in mind, this exercise goes deep inside the MVC by connecting with a database and fetching data from it.
+
+The View file is only the window where the result of the function `printListaCiudades()` will be displayed.
 ``````html
 <body>
   <h1>Conectando a la base de datos de países</h1>
@@ -754,7 +757,9 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 #
 #### [Example 17.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.2_MVC_Controller_Show_Data.php)
+This file represents the client-side controller. It means that this code builds the HTML structure with the data fetched using the server-side controller and the Model file.
 
+The data comes to this file as the return of the function `getListaCiudades()`;
 ``````php
 <?php
   include 'Ex_17.3_MVC_Model_Data_Handling.php';
@@ -782,7 +787,6 @@ This file could be seen as the Controller of an MVC design pattern, because it c
                 <td>" . $fila["District"] . "</td>\n
                 <td>" . $fila["Population"] . "</td>\n
               </tr>\n";
-              
       };
       echo "</table>\n";
     };
@@ -792,7 +796,7 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 #
 #### [Example 17.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.3_MVC_Model_Data_Handling.php)
-
+This file can be interpreted as the server-side controller file or the model file. The point is that the function of this code is fetching data from the database and returning it to the client-side controller to allow the HTML building.
 ``````php
 <?php
   require "Ex_17.4_MVC_Model_Database.php";
@@ -816,7 +820,7 @@ This file could be seen as the Controller of an MVC design pattern, because it c
 
 #
 #### [Example 17.4:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_17_Database_Connection/Ex_17.4_MVC_Model_Database.php)
-
+To fetch data, it is necessary to establish a connection with a database. So, this file does that; this is its unique function. `crearConexion()` is the method used to specify where the database is hosted and how we access it. This file also contains the `cerrarConexion()` method, which closes all of the connections with the indicated database.
 ``````php
 <?php
   function crearConexion($database){
