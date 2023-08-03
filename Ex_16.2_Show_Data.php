@@ -14,11 +14,11 @@
 <body>
   <?php include 'Ex_16.3_Show_Data_Functions.php'?>
   
-  <h1>Recibimos del formulario anterior</h1>
+  <h1>Recibimos datos del formulario anterior</h1>
   <p>Has elegido hacer el examen en 
     <span><?php echo mostrarCiudad();?></span> el dia
     <span><?php echo mostrarFecha();?></span>
   </p>
-  <a href="Ex_16_GET_Method_Form.php">Volver</a>
+  <a href="Ex_16_GET_Method_Form.html">Volver</a>
 </body>
 </html>

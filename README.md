@@ -470,7 +470,7 @@ In this code block, we import functions and data from other files using the incl
 
 
 
-## [Example 13:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13_Forms.php)
+## [Example 13:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_13_Forms.html)
 PHP forms allow us to collect and process data entered by users on webpages. Generally, a form is made up of inputs such as text fields, action buttons, checkboxes, and submit buttons, among others. These forms send the information to the server for processing.
 
 The data entered by the user is sent to the server as part of an HTTP request. After that, PHP can access the data using superglobals like $_GET or $_POST according to the sending method defined in the form.
@@ -513,7 +513,7 @@ As we can see $_GET['nombre'] and $_GET['apellido'] are data received by the `Ex
 
 
 
-## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14_Form_Submit.php)
+## [Example 14:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_14_Form_Submit.html)
 This is another example of how PHP, together with HTML5, collects and processes data entered by users in a form. However, in this case, the chosen method is POST.
 ``````html
 <body>
@@ -561,7 +561,7 @@ After that, the cookie called lista is overwritten, storing the accumulated valu
 
 
 
-## [Example 15:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15_Form.php)
+## [Example 15:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_15_Form.html)
 This HTML5 file is a form whose data will be processed by `Ex_15_Show_Data.php`, sending the data through the POST method.
 ``````html
 <body>
@@ -653,16 +653,79 @@ The functions `asignarClase()` and `asignarGenero()` will return a string, which
 
 
 
-## [Example 16:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16_GET_Method_Form.php)
+## [Example 16:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16_GET_Method_Form.html)
+This is a form using the GET method for data sending, which means the data goes through the URL. As we can see, there is a link at the end of the file which forces a GET method, sending predefined data.
+``````html
+<body>
+  <form action="Ex_16.2_Show_Data.php" method="GET">
+    <p>Ciudad: <input type="text" name="ciudad"></p>
+    <p>Fecha: <input type="date" name="fecha"></p>
+    <input type="submit" name="Enviar">
+  </form>
 
-
+  <a href="Ex_16_Show_Data.php?ciudad=Madrid&fecha=Pendiente">Me puedo presentar en Madrid en cualquier fecha que me den</a>
+  <!-- Forzamos la URL con un GET -->
+</body>
+``````
 #
 #### [Example 16.2:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.2_Show_Data.php)
-
-
+As it happened in the previous exercise 15, this file shows the data collected by the form, making use of the `include()` method to call functions from `Ex_16.3_Show_Data_Functions.php`. These functions will return a string based on the parameter received.
+``````php
+<body>
+  <?php include 'Ex_16.3_Show_Data_Functions.php'?>
+  
+  <h1>Recibimos datos del formulario anterior</h1>
+  <p>Has elegido hacer el examen en 
+    <span><?php echo mostrarCiudad();?></span> el dia
+    <span><?php echo mostrarFecha();?></span>
+  </p>
+  <a href="Ex_16_GET_Method_Form.html">Volver</a>
+</body>
+``````
 #
 #### [Example 16.3:](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_16.3_Show_Data_Functions.php)
+This file could be seen as the Controller of an MVC design pattern, because it contains all of the functions used in the entire example. These functions receive data and return another following a logic.
+``````php
+<?php
+  function mostrarCiudad(){
+    if (isset($_GET['ciudad'])) {
 
+      if (strlen($_GET['ciudad'] > 0)) {
+        $ciudad = $_GET['ciudad'];
+      }
+      else{
+        $ciudad = 'NO SE HA DEFINIDO CIUDAD';
+      }
+    }
+    return $ciudad;
+  }
+
+  function mostrarFecha(){
+
+    // Comprobaremos si existe el valor
+    if (isset($_GET['fecha'])) {
+
+      if (strlen($_GET['fecha']) > 0) {
+        // Si tiene el valor 'Pendiente' (hemos pulsado el enlace forzando el envío GET)
+        if ($_GET['fecha'] == 'Pendiente') {
+          $fechaFormateada = 'Te avisaremos cuando haya una fecha disponible';
+        }
+        else {
+          // Si no, venimos del formulario
+          $fecha = $_GET['fecha'];
+          $tiempo = strtotime($fecha);
+          $fechaFormateada = date('l, d, F Y', $tiempo);
+        }
+      }
+      else {
+      // Si no está definida es que hemos accedido directamente a esta página sin pasar por el formulario
+      $fechaFormateada = 'NO SE HA ELEGIDO FECHA';
+    }
+    }
+    return $fechaFormateada;
+  }
+?>
+``````
 #### _Seen methods:_
 - `include()`
 - `isset()`
@@ -757,11 +820,47 @@ The functions `asignarClase()` and `asignarGenero()` will return a string, which
 
 
 ## [Extra 1: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+Every time we ask PHP for a date using the `date()` method, it is displayed in English. So, in order to get a Spanish date, we can apply this technique based on arrays, one for the months and another for the weekdays.
+``````php
+<?php
+  $time = time();
+  $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+  $díaSemana = array("Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo");
 
+  echo 'EJERCICIO 1 - MOSTRAR FECHA EN CASTELLANO <br>';
 
----
-#### [Extra 1.2: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+  # Número de día del año y día de la semana en castellano
+  # Para que se muestra el día de la semana en castellano creamos un array de strings con los días de la semana. Luego mediante el método date obtenemos el número del día de la semana (1-7) y le restamos uno porque los elementos del array comienzan desde el 0.
+  echo '<b>'.date("z ").$díaSemana[date("N")-1].'</b> <br>';
 
+  # Fecha completa con mes en castellano
+  echo '<b>'.$díaSemana[date("w")-1].date(" d ").$meses[date("n")-1].date(" o").'</b> <br>';
+
+  # Horas minutos y segundos con dos dígitos
+  echo '<b>'.date("g:i:s").'</b> <br>';
+
+  # Más detalle en https://www.baulphp.com/convertir-fecha-php-en-espanol/
+?>
+``````
+With date('w'), date('d'), and date('n'), we get the weekday numeric representation (0-6), the month day (01-31), and the numeric representation of the month (01-12). The -1 means we require a lower value because the range value returned by date('n') starts from 1, not 0, as the arrays do.
+#
+#### [Extra 1.2: Spanish Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Extra_1_Spanish_Date.php)
+This example was another way we used to apply displaying dates in other languages. However, it is no longer useful because the `strftime()` method has been deprecated. This method was used to format a local time or date according to locale settings.
+
+The `setlocale()` method was used together with `strftime()` because the first one sets locale information.
+
+``````php
+<?php
+  setlocale(LC_TIME,'es_ES.UTF-8', 'esp');
+  $formatoFechaHora = "%j: %A, %d de %B de %Y %H:%M%:%S";
+  $strf = strftime($formatoFechaHora); # Ya no sirve, está en desuso
+  
+  # Fecha completa
+  echo $strf;
+
+  # No funciona
+?>
+``````
 #### _Seen methods:_
 
 - `time()`
@@ -773,7 +872,7 @@ The functions `asignarClase()` and `asignarGenero()` will return a string, which
 
 
 
-## [Extra 2: Insert Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Ex_1_Links_Inside_PHP.php)
+## [Extra 2: Insert Date](https://github.com/juancumbeq/DAW_M07_Server_Environment_Exercises/blob/main/Extra_1.2_Spanish_Date_SetLocale.php)
 
 #### _Seen methods:_
 
