@@ -1,15 +1,16 @@
 <?php
-require "Ex_17B.4_MVC_Model_Database.php";
+include "Ex_17B.4_MVC_Model_Database.php";
 
 function getListaCiudades($orden)
 {
+  echo "Dentro de getListaCiudades";
   // Nos conectamos a la base de datos world
   $DB = crearConexion("world");
   // Definimos la consulta para obtener todos los datos de la tabla city
   if ($orden == "Creciente") {
-    $sql = "SELECT ID, Name, CountryCode, District, Population FROM city ORDER BY Population ASC";
+    $sql = 'SELECT ID, Name, CountryCode, District, Population FROM city ORDER BY Population ASC';
   } else {
-    $sql = "SELECT ID, Name, CountryCode, District, Population FROM city ORDER BY Population DESC";
+    $sql = 'SELECT ID, Name, CountryCode, District, Population FROM city ORDER BY Population DESC';
   }
 
   // Hacemos la consulta y guardamos el resultado en $result
@@ -77,7 +78,7 @@ function añadirCiudad($nombre, $codigoPais, $distrito, $poblacion)
 function borrarCiudad($identificador)
 {
   $DB = crearConexion("world");
-  $sql = "DELETE FROM city WHERE ID='".$identificador."'";
+  $sql = "DELETE FROM city WHERE ID='" . $identificador . "'";
 
   $result = mysqli_query($DB, $sql);
 

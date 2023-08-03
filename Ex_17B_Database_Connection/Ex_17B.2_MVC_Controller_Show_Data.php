@@ -36,6 +36,7 @@
               </tr>\n";
               // Añado a cada fila un formulario con un elemento oculto y otro submit que nos llevará a borrar
       };
+    // Otra manera de recorrer la tabla virtual sería mediante un foreach:
       // foreach ($datos as $fila) {
       //   echo "<tr>\n
       //             <td>" . $fila["ID"] . "</td>\n
